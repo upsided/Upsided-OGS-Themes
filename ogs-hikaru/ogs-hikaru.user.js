@@ -10,16 +10,15 @@
 
 (function () {
     function setup() {
-        console.log("[ogs 8-bit style] setting up");
+        console.log("[ogs hikaru] setting up");
 
         var whitestone = new Image;
         var blackstone = new Image;
         var shade = new Image;
 
-        // TEMPORARY files until they're uploaded to github
-        whitestone.src = "https://dl.dropboxusercontent.com/s/5ot3s02rejed3yl/white_stone_shadow.svg?dl=1"
-        blackstone.src = "https://dl.dropboxusercontent.com/s/ixxg4bz62n9vqax/black_stone_raw.svg?dl=1"
-        shade.src = "https://dl.dropboxusercontent.com/s/8cxrevkyykvajqb/white_stone_shadow.svg?dl=1"
+        whitestone.src = "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_white_stone_raw.svg"
+        blackstone.src = "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_black_stone_raw.svg"
+        shade.src = "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_stone_shadow.svg"
 
         document.querySelector("[title='Kaya']").style.backgroundImage = "url(\"https://github.com/upsided/Upsided-Sabaki-Themes/raw/main/hikaru/board.svg\")";
 
