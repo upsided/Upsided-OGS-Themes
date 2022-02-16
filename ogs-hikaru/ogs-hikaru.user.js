@@ -9,7 +9,10 @@
 // ==/UserScript==
 
 (function () {
+    const TIMEOUT = 2000 // time before fake-clicking everything
+
     function setup() {
+
         console.log("[ogs hikaru] setting up");
 
         var whitestone = new Image;
@@ -64,40 +67,49 @@
         );
     }
 
+    function mashCoordinates() {
+        let c = document.getElementsByClassName("ogs-coordinates")
+        if (c.length > 0) {
+            for (let i = 0; i < 6; i++)
+                simulateMouseClick(c[0])
+            //console.log("mashed some coordinates")
+
+        }
+        setTimeout(mashCoordinates, TIMEOUT)
+    }
+
     function clickCrazy() {
         // have to brute force click stuff to force a redraw
         // b/c I don't know how to call a board redraw directly
         let blah = document.querySelectorAll("[title='Plain']")
-        const BRUTE = 3 // sadly, seems like < 50 times doesn't work
+        const BRUTE = 10 //
 
-        for (let i = 0; i < BRUTE; i++) {
+        for (let b = 0; b < BRUTE; b++) {
+            // click the kaya & glass stone settings, because that's where
+            // we placed the theme
+
+            blah = document.querySelectorAll("[title='Kaya']")
             for (let b of blah) simulateMouseClick(b)
+
+            blah = document.querySelectorAll("[title='Glass']")
+            for (let b of blah) simulateMouseClick(b)
+
+            mashCoordinates() // launches a repeating timer
+
         }
 
-        blah = document.querySelectorAll("[title='Kaya']")
-        for (let i = 0; i < BRUTE; i++) {
-            for (let b of blah) simulateMouseClick(b)
-        }
-
-        blah = document.querySelectorAll("[title='Glass']")
-
-        for (let i = 0; i < BRUTE; i++) {
-            for (let b of blah) simulateMouseClick(b)
-        }
-
-        blah = document.getElementById("board-canvas")
-        console.log(blah)
-
-        for (let i = 0; i < BRUTE; i++) blah.dispatchEvent(new Event('resize'))
     }
 
-
+    var setupDone = false
     // set up the mutation observer
     // altho this should be installed with @run-at idle, I still saw the code run prior to these globals being available, so just watch the page for updates until they are present
     var observer = new MutationObserver(function (mutations, me) {
         if (typeof data !== "undefined" && typeof GoThemes !== "undefined") {
-            setup();
-            setTimeout(clickCrazy, 1000)
+            if (!setupDone) {
+                setup();
+                setTimeout(clickCrazy, TIMEOUT)
+                setupDone = true
+            }
             me.disconnect(); // stop observing
         } else {
             console.log("[ogs hikaru] data or GoThemes not found, waiting...");
