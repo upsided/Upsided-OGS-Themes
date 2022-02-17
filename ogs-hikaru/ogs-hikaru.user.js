@@ -44,7 +44,7 @@
         GoThemes.black.Glass.prototype.placeBlackStone = function (ctx, shadow_ctx, stone, cx, cy, radius) {
 
             if (shadow_ctx != undefined)
-                shadow_ctx.drawImage(shade, cx - radius * 0.85, cy - radius * 0.85, radius * 1.9, radius * 2.1)
+                shadow_ctx.drawImage(shade, cx - radius * 0.85, cy - radius * 0.85, radius * 2, radius * 2.1)
 
             ctx.drawImage(blackstone, cx - radius * 0.97, cy - radius * 0.97, radius * 1.97, radius * 1.97)
 
