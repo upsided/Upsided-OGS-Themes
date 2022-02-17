@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 (function () {
-    const TIMEOUT = 2000 // time before fake-clicking everything
+    const TIMEOUT = 1000 // time before fake-clicking everything
 
     function setup() {
 
@@ -36,7 +36,7 @@
         GoThemes.white.Glass.prototype.placeWhiteStone = function (ctx, shadow_ctx, stone, cx, cy, radius) {
 
             if (shadow_ctx != undefined)
-                shadow_ctx.drawImage(shade, cx - radius * 0.95, cy - radius * 0.95, radius * 2.05, radius * 2.2)
+                shadow_ctx.drawImage(shade, cx - radius * 0.85, cy - radius * 0.85, radius * 2, radius * 2.1)
 
             ctx.drawImage(whitestone, cx - radius * 0.97, cy - radius * 0.97, radius * 1.97, radius * 1.97)
         };
@@ -44,7 +44,7 @@
         GoThemes.black.Glass.prototype.placeBlackStone = function (ctx, shadow_ctx, stone, cx, cy, radius) {
 
             if (shadow_ctx != undefined)
-                shadow_ctx.drawImage(shade, cx - radius * 0.95, cy - radius * 0.95, radius * 2.05, radius * 2.2)
+                shadow_ctx.drawImage(shade, cx - radius * 0.85, cy - radius * 0.85, radius * 1.9, radius * 2.1)
 
             ctx.drawImage(blackstone, cx - radius * 0.97, cy - radius * 0.97, radius * 1.97, radius * 1.97)
 
@@ -75,14 +75,14 @@
             //console.log("mashed some coordinates")
 
         }
-        setTimeout(mashCoordinates, TIMEOUT)
+        //setTimeout(mashCoordinates, TIMEOUT) // causes too much lag
     }
 
     function clickCrazy() {
         // have to brute force click stuff to force a redraw
         // b/c I don't know how to call a board redraw directly
         let blah = document.querySelectorAll("[title='Plain']")
-        const BRUTE = 10 //
+        const BRUTE = 5 //
 
         for (let b = 0; b < BRUTE; b++) {
             // click the kaya & glass stone settings, because that's where
