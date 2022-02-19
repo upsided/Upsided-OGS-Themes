@@ -25,7 +25,7 @@
     */
 
     var theme = {
-        "boardImage": "https://github.com/upsided/Upsided-Sabaki-Themes/raw/main/hikaru/board.svg",
+        "boardImage": "https://raw.githubusercontent.com/upsided/Upsided-Sabaki-Themes/main/hikaru/board.svg",
 
         "whiteStones": [
             "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_white_stone_raw.svg"
@@ -56,13 +56,13 @@
         ],
 
         "blackShadowBounds": [
-            [-0.85, -0.85, 1, 1.1],
+            [-.88, -.88, 1.1, 1.25],
             // [-0.83, -0.83, 1.02, 1.12],
             // [-0.88, -0.88, .97, 1.07]
         ],
 
         "whiteShadowBounds": [
-            [-0.85, -0.85, 1, 1.1],
+            [-.88, -.88, 1.1, 1.25],
             // [-0.83, -0.83, 1.02, 1.12],
             // [-0.88, -0.88, .97, 1.07]
         ]
@@ -129,14 +129,14 @@
                 let img = whiteshadows[0] //whiteshadows[rando%whiteshadows.length]
                 let box = theme.whiteShadowBounds[rando % theme.whiteShadowBounds.length]
 
-                shadow_ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1], radius + radius * box[2], radius + radius * box[3])
+                shadow_ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1],  radius * (box[2]-box[0]), radius * (box[3]-box[1]))
 
             }
 
             let img = whitestones[rando % whitestones.length]
             let box = theme.whiteStoneBounds[rando % theme.whiteStoneBounds.length]
 
-            ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1], radius + radius * box[2], radius + radius * box[3])
+            ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1],  radius * (box[2]-box[0]), radius * (box[3]-box[1]))
         };
 
         //draw custom black stone
@@ -149,14 +149,14 @@
                 let img = whiteshadows[0] //whiteshadows[rando%whiteshadows.length]
                 let box = theme.blackShadowBounds[rando % theme.blackShadowBounds.length]
 
-                shadow_ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1], radius + radius * box[2], radius + radius * box[3])
+                shadow_ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1],  radius * (box[2]-box[0]), radius * (box[3]-box[1]))
 
             }
 
             let img = blackstones[rando % blackstones.length]
             let box = theme.blackStoneBounds[rando % theme.blackStoneBounds.length]
 
-            ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1], radius + radius * box[2], radius + radius * box[3])
+            ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1],  radius * (box[2]-box[0]), radius * (box[3]-box[1]))
 
         };
 
