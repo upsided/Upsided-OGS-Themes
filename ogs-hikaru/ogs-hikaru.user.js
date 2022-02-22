@@ -126,7 +126,7 @@
             let rando = Math.floor(cx*31 + cy*29)
 
             if (shadow_ctx != undefined && whiteshadows.length > 0){
-                let img = whiteshadows[0] //whiteshadows[rando%whiteshadows.length]
+                let img = whiteshadows[rando%whiteshadows.length]
                 let box = theme.whiteShadowBounds[rando % theme.whiteShadowBounds.length]
 
                 shadow_ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1],  radius * (box[2]-box[0]), radius * (box[3]-box[1]))
@@ -146,7 +146,7 @@
             let rando = Math.floor(cx*31 + cy*29)
 
             if (shadow_ctx != undefined && blackshadows.length > 0){
-                let img = whiteshadows[0] //whiteshadows[rando%whiteshadows.length]
+                let img = blackshadows[rando%blackshadows.length]
                 let box = theme.blackShadowBounds[rando % theme.blackShadowBounds.length]
 
                 shadow_ctx.drawImage(img, cx + radius * box[0], cy + radius * box[1],  radius * (box[2]-box[0]), radius * (box[3]-box[1]))
