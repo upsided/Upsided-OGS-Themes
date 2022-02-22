@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg8"
    version="1.1"
    viewBox="0 0 29.780084 29.780087"
    height="29.780087mm"
    width="29.780085mm"
-   sodipodi:docname="white_stone_raw.svg"
-   inkscape:version="1.1-dev (9017afb, 2021-01-01)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   sodipodi:docname="hikaru_white_stone_raw.svg"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)">
   <sodipodi:namedview
      id="namedview985"
      pagecolor="#ffffff"
@@ -40,7 +40,9 @@
      inkscape:window-x="0"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg8" />
+     inkscape:current-layer="svg8"
+     inkscape:document-rotation="0"
+     inkscape:snap-page="true" />
   <defs
      id="defs2">
     <linearGradient
@@ -313,4 +315,11 @@
        rx="14.537265"
        ry="14.537266" />
   </g>
+  <rect
+     style="opacity:0.787781;fill:#ffffff;fill-opacity:0.00396824;stroke:#ffffff;stroke-width:0.352999;stroke-opacity:0"
+     id="rect2102"
+     width="29.780085"
+     height="29.780087"
+     x="0"
+     y="0" />
 </svg>
