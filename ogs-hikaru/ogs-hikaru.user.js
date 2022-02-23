@@ -28,11 +28,12 @@
         "boardImage": "https://raw.githubusercontent.com/upsided/Upsided-Sabaki-Themes/main/hikaru/board.svg",
 
         "whiteStones": [
-            "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_white_stone_raw.svg"
+            "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_white_stone_raw_25pc.svg"
         ],
 
         "blackStones": [
-            "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_black_stone_raw.svg"
+            "https://raw.githubusercontent.com/upsided/Upsided-OGS-Themes/main/ogs-hikaru/hikaru_black_stone_raw_25pc.svg",
+
         ],
 
         "whiteShadows": [
@@ -44,13 +45,13 @@
         ],
 
         "blackStoneBounds": [ // left, top, right, bottom. This shuffles them up. If you don't like this, remove all but the first one.
-            [-0.97, -0.97, 0.97, 0.97],
-            // [-0.95, -0.95, 0.99, 0.99],
+            [-4*0.97, -4*0.97, 4*0.97, 4*0.97], // weird bounds for a pre-scaled mini SVG stone to work around Firefox SVG clipping bug
+            // [-0.95, -0.95, 0.95, 0.95],
             // [-1, -1, 0.94, 0.94]
         ],
 
         "whiteStoneBounds": [
-            [-0.97, -0.97, 0.97, 0.97],
+            [-4*0.97, -4*0.97, 4*0.97, 4*0.97],
             // [-0.95, -0.95, 0.99, 0.99],
             // [-1, -1, 0.94, 0.94]
         ],
