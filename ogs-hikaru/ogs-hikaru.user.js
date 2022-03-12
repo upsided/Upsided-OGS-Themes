@@ -108,9 +108,15 @@
 
 
         //setup background image
-        document.querySelector("[title='Kaya']").style.backgroundImage = `url("${theme.boardImage}")`;
+        const boardIcon = document.querySelector("[title='Кая']").style.backgroundImage = `url("${theme.boardImage}")`;
+        const divs = document.querySelectorAll("div");
+        for (let d of divs) {
+            const bi = d.style["background-image"];
+            if (bi && bi["background-image"] && bi["background-image"].search("kaya") > -1) {
+                d.style.backgroundImage = `url("${theme.boardImage}")`;
+            }
+        }
 
-        // not sure if needed:
         GoThemes.board.Kaya.prototype.getBackgroundCSS = function () {
             return {
                 "background-image": `url("${theme.boardImage}")`,
