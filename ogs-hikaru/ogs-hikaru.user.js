@@ -108,7 +108,6 @@
 
 
         //setup background image
-        const boardIcon = document.querySelector("[title='Кая']").style.backgroundImage = `url("${theme.boardImage}")`;
         const divs = document.querySelectorAll("div");
         for (let d of divs) {
             const bi = d.style["background-image"];
